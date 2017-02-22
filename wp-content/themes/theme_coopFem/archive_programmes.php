@@ -31,15 +31,14 @@ get_header(); ?>
         <div class="col-md-1 calendrier">
 
           <?php
-          $texte = get_field('date_programme');
-          //Les chiffres
-          $chiffres = explode("[a-zA-Z]", $texte);
-          //Les lettres
-          $lettres = explode("[0-9]", $texte);
-          //Affichage
-          echo "<p class='date_month'>".implode("",$lettres);
-          echo "<p class='date_day'>".implode("",$chiffres);
-          ?>
+            $texte = get_field('date_programme');
+            $texteArr = explode(" ", $texte);
+            $jour = $texteArr[0];
+            $mois = $texteArr[1];
+            //Affichage
+            echo "<p class='date_month'>".substr($mois, 0, 4);
+            echo "<p class='date_day'>".$jour;
+            ?>
 
         </div>
         <div class="col-md-10 contentActivite">
