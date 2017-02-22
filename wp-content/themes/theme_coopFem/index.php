@@ -134,7 +134,7 @@ get_header(); ?>
           <div class="col-md-2 calendrier">
 
             <?php
-             showDate(get_field('date_manif'));
+             showDate(get_field('date_programme'));
             ?>
 
           </div>
