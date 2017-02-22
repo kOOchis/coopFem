@@ -107,13 +107,12 @@ get_header(); ?>
 
             <?php
             $texte = get_field('date_manif');
-            //Les chiffres
-            $chiffres = split("[a-zA-Z]", $texte);
-            //Les lettres
-            $lettres = split("[0-9]", $texte);
+            $texteArr = explode(" ", $texte);
+            $jour = $texteArr[0];
+            $mois = $texteArr[1];
             //Affichage
-            echo "<p class='date_month'>".implode("",$lettres);
-            echo "<p class='date_day'>".implode("",$chiffres);
+            echo "<p class='date_month'>".substr($mois, 0, 4);
+            echo "<p class='date_day'>".$jour;
             ?>
 
           </div>
@@ -142,13 +141,13 @@ get_header(); ?>
 
             <?php
             $texte = get_field('date_programme');
-            //Les chiffres
-            $chiffres = split("[a-zA-Z]", $texte);
-            //Les lettres
-            $lettres = split("[0-9]", $texte);
+            $texteArr = explode(" ", $texte);
+            $jour = $texteArr[0];
+            $mois = $texteArr[1];
+
             //Affichage
-            echo "<p class='date_month'>".implode("",$lettres);
-            echo "<p class='date_day'>".implode("",$chiffres);
+            echo "<p class='date_month'>".substr($mois, 0, 4);
+            echo "<p class='date_day'>".$jour;
             ?>
 
           </div>
