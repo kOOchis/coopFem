@@ -37,6 +37,12 @@ function getDates($date) {
 	return $dateArr;
 }
 
+function showDate($dates) {
+	$dates = getDates($dates);
+	echo "<p class='date_month'>". $dates[1];
+    echo "<p class='date_day'>".$dates[0];
+}
+
 function pagination($query) {
 
 	$baseURL="http://".$_SERVER['HTTP_HOST'];

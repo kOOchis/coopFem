@@ -106,10 +106,7 @@ get_header(); ?>
           <div class="col-md-2 calendrier">
 
             <?php
-            $dates = getDates(get_field('date_manif'));
-            //Affichage
-            echo "<p class='date_month'>". $dates[1];
-            echo "<p class='date_day'>".$dates[0];
+            showDate(get_field('date_manif'));
             ?>
 
           </div>
@@ -137,11 +134,7 @@ get_header(); ?>
           <div class="col-md-2 calendrier">
 
             <?php
-            $dates = getDates(get_field('date_programme'));
-
-            //Affichage
-            echo "<p class='date_month'>". $dates[1];
-            echo "<p class='date_day'>".$dates[0];
+             showDate(get_field('date_manif'));
             ?>
 
           </div>
