@@ -7,14 +7,22 @@
           $(submenu).slideUp(400);
         }
     });
+  
 
+    function menuResponsive() {
+      event.preventDefault();
+      console.log("click");
+      /*$(".menu-navigation-header-container").fadeIn();*/
+
+      $(".menu-navigation-header-container").toggle("slideDown");
+    }
 
 
 
 $('#menu-navigation-header>li>a').each(function() {
   var changeText;
   var text = (  $( this ).text() );
-  console.log(text);
+/*  console.log(text);*/
 
 
     $('#menu-item-10 a:first').replaceWith('<a href="http://localhost/wp-coopFem/">Coopération Féminine <i class="fa fa-chevron-down" aria-hidden="true"></i></a>');

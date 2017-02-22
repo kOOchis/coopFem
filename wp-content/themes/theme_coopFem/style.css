@@ -235,6 +235,10 @@ a {
   height: 50px;
 }
 /* line 88, ../sass/style.scss */
+
+.navigationTop .forResponsive{
+  display: none;
+}
 .navigationTop ul li a {
   padding: 10px 8px 8px 0;
   display: block;
@@ -725,4 +729,39 @@ footer .owl-theme .owl-controls .owl-page span {
 
 label{
   font-family: 'Roboto', sans-serif !important;
+}
+
+
+@media only screen and (max-width : 780px) {
+
+  .navigationTop .forResponsive{
+    display: block;
+  }
+  
+  .navigationBaseline .left {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navigationBaseline .right{
+    width: 100%;
+    display: none;
+  }
+  
+  .navigationTop{
+    padding-left: 1rem;
+  }
+  
+  .menu-navigation-header-container ul li {
+    width: 100%;
+  }
+
+  section{
+    padding: 1rem;
+  }
+
+  .menu-navigation-header-container{
+    display: none;
+  }
+
 }

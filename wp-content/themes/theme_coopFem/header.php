@@ -35,6 +35,7 @@
        <ul>
 	       <li><a target="_blank" href="https://www.facebook.com/La-Coop%C3%A9ration-F%C3%A9minine-Paris-279644072242870/"><i class="fa fa-facebook rouge-color white" aria-hidden="true"></i></a></li>
 	       <li><a target="_blank" href="https://www.flickr.com/photos/39914732@N07/sets/"><i class="fa fa-flickr rouge-color white" aria-hidden="true"></i></a></li>
+         <li class="forResponsive"><a style=" padding:5px 0 0 0; float: right;  " onclick=menuResponsive()><i style ="border: 0px solid black; font-size:1.5rem;" class="fa fa-bars white-color" aria-hidden="true"></i></a></li>
      	 </ul>
    	</div>
    </div>
