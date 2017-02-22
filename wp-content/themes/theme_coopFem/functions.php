@@ -31,6 +31,12 @@ add_theme_support('post-thumbnails' );
 set_post_thumbnail_size(409,544,true );
 
 
+function getDates($date) {
+	$dateArr = explode(" ", $date);
+	$dateArr[1] = substr($dateArr[1], 0, 4);
+	return $dateArr;
+}
+
 function pagination($query) {
 
 	$baseURL="http://".$_SERVER['HTTP_HOST'];

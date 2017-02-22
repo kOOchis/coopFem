@@ -106,13 +106,10 @@ get_header(); ?>
           <div class="col-md-2 calendrier">
 
             <?php
-            $texte = get_field('date_manif');
-            $texteArr = explode(" ", $texte);
-            $jour = $texteArr[0];
-            $mois = $texteArr[1];
+            $dates = getDates(get_field('date_manif'));
             //Affichage
-            echo "<p class='date_month'>".substr($mois, 0, 4);
-            echo "<p class='date_day'>".$jour;
+            echo "<p class='date_month'>". $dates[1];
+            echo "<p class='date_day'>".$dates[0];
             ?>
 
           </div>
@@ -140,14 +137,11 @@ get_header(); ?>
           <div class="col-md-2 calendrier">
 
             <?php
-            $texte = get_field('date_programme');
-            $texteArr = explode(" ", $texte);
-            $jour = $texteArr[0];
-            $mois = $texteArr[1];
+            $dates = getDates(get_field('date_programme'));
 
             //Affichage
-            echo "<p class='date_month'>".substr($mois, 0, 4);
-            echo "<p class='date_day'>".$jour;
+            echo "<p class='date_month'>". $dates[1];
+            echo "<p class='date_day'>".$dates[0];
             ?>
 
           </div>
