@@ -30,13 +30,21 @@ register_nav_menus( array(
 add_theme_support('post-thumbnails' );
 set_post_thumbnail_size(409,544,true );
 
-
+/**
+ * getDates
+ * @param  [array] $date 
+ * @return [array] preformat month and day 
+ */
 function getDates($date) {
 	$dateArr = explode(" ", $date);
 	$dateArr[1] = substr($dateArr[1], 0, 4);
 	return $dateArr;
 }
 
+/**
+ * showDate affichage de la date
+ * @param  [array] $dates
+ */
 function showDate($dates) {
 	$dates = getDates($dates);
 	echo "<p class='date_month'>". $dates[1];
