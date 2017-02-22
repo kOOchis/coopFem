@@ -437,6 +437,9 @@ footer .liensFooter .lienStyle li a:active, footer .liensFooter .lienStyle li a:
 .contentActivite .date{
   margin-bottom: 1rem;
 }
+.contentActivite h3{
+  margin-top: 1rem;
+}
 
 .pagination{
   margin: 0;
