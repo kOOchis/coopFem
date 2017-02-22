@@ -33,9 +33,9 @@ get_header(); ?>
           <?php
           $texte = get_field('date_programme');
           //Les chiffres
-          $chiffres = split("[a-zA-Z]", $texte);
+          $chiffres = explode("[a-zA-Z]", $texte);
           //Les lettres
-          $lettres = split("[0-9]", $texte);
+          $lettres = explode("[0-9]", $texte);
           //Affichage
           echo "<p class='date_month'>".implode("",$lettres);
           echo "<p class='date_day'>".implode("",$chiffres);

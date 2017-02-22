@@ -42,6 +42,4 @@ $('#menu-navigation-header>li>a').each(function() {
     $('#menu-item-256 a:first').click(function(event){
     event.preventDefault();
 });
-
-
 });
