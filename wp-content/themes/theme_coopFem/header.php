@@ -44,7 +44,8 @@
  <div class="rouge">
   <div class="navigationBaseline">
     <div class="container" style="padding-right:0;">
-	    <h1 class="left"><a href="index.php" class="white-color">Coopération féminine</a></h1>
+      <?php $url = home_url(); ?>
+      <h1 class="left"><a href="<?php echo esc_url( $url ); ?>" class="white-color">Coopération féminine</a></h1>
 	    <img class="right" src="<?php bloginfo("template_directory");?>/ressources/logos/logo.jpg" alt="">
   	</div>
   </div>
