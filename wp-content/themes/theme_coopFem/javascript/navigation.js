@@ -1,11 +1,12 @@
     $('.menu li > .sub-menu').hide();
-    $('.menu li > .sub-menu').parent().hover(function() {
-        var submenu = $(this).children('.sub-menu');
-        if ( $(submenu).is(':hidden') ) {
-          $(submenu).slideDown(400);
-        } else {
-          $(submenu).slideUp(400);
-        }
+    $('.menu li > .sub-menu').parent().mouseenter(function() {
+      var submenu = $(this).children('.sub-menu');
+      $(submenu).slideDown(400);
+    });
+
+    $('.menu li > .sub-menu').parent().mouseleave(function() {
+      var submenu = $(this).children('.sub-menu');
+        $(submenu).slideUp(400);
     });
   
 
