@@ -44,17 +44,20 @@ get_header(); ?>
       <div class="col-md-4">
         <?php echo "<h2>$title_action</h2>
         <p>$contenu_action</p>"; ?>
-        <a href="<?php get_post_permalink( $id_action ); ?>" class="btn btn-primary bouton">Plus d'infos</a>
+        <?php $url = home_url(); ?>
+        <a href="<?php echo esc_url( $url ); ?>/presentation/action-feminine-de-collecte" class="btn btn-primary bouton">Plus d'infos</a>
       </div>
+
       <div class="col-md-4">
         <?php echo "<h2>$title_radio</h2>
         <p>$contenu_radio</p>"; ?>
-        <a href="<?php get_post_permalink( $id_radio ); ?>" class="btn btn-primary bouton">Toutes les émissions</a>
+        <a target="_blank" href="https://web.archive.org/web/20160409190429/http://radiorcj.info/emissions/pour-nous-les-femmes/" class="btn btn-primary bouton">Toutes les émissions</a>
       </div>
+
       <div class="col-md-4">
         <?php echo "<h2>$title_soutien</h2>
         <p>$contenu_soutien</p>"; ?>
-        <a href="<?php get_post_permalink( $id_soutien ); ?>" class="btn btn-primary bouton">Plus d'infos</a>
+        <a href="<?php echo esc_url( $url ); ?>/presentation/action-feminine-de-collecte" class="btn btn-primary bouton">Plus d'infos</a>
       </div>
     </div>
   </div>
@@ -77,17 +80,23 @@ get_header(); ?>
     <div class="col-md-8">
       <h2 style="margin-left:-15px;">Quelques activités de la Coopération Féminine</h2>
         <!-- Début de la Boucle. -->
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="row rowStyle">
-            <div class="col-md-4 imgStyle">
-              <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt="">
-            </div>
-            <div class="col-md-8 contentActivite">
+        <?php $args = array(
+        'post_type' => 'activite',
+        'showposts'=>3);
+         $query = new WP_Query( $args );
+         ?>
+        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div  class="row rowStyle">        
+            <!-- <div class="col-xs-5 imgStyle">
+                <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt=""> 
+            </div> -->
+          <div class=" contentActivite">        
               <h3><?php the_title(); ?></h3>
-              <p class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> <?php echo get_the_date(); ?></p>
+              <p class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> 
+              <?php echo get_the_date(); ?></p>
               <p><?php the_excerpt(); ?></p>
               <a href="<?php the_permalink(); ?>" class="btn btn-primary bouton">Lire la suite</a>
-            </div>
+          </div>
         </div>
         <?php endwhile; else: ?>
         <?php endif; ?>
@@ -118,7 +127,7 @@ get_header(); ?>
       </div>
     <?php endwhile; ?>
     <div  style="margin-top:0;"  class="rowStyle row">
-      <a href="http://localhost/wp-coopFem/manifestations/" class="btn btn-primary bouton">Voir toutes les manifestations</a>
+      <a href="<?php echo esc_url( $url ); ?>/manifestations/" class="btn btn-primary bouton">Voir toutes les manifestations</a>
     </div>
     </div>
 
@@ -146,7 +155,8 @@ get_header(); ?>
       </div>
     <?php endwhile; ?>
     <div  style="margin-top:0;"  class="rowStyle row">
-      <a href="http://localhost/wp-coopFem/nos-programmes/" class="btn btn-primary bouton">Voir tous les programmes</a>
+      <?php $url = home_url(); ?>
+      <a href="<?php echo esc_url( $url ); ?>/nos-programmes" class="btn btn-primary bouton">Voir tous les programmes</a>
     </div>
     </div>
 

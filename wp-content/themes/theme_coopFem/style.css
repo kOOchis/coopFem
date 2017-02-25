@@ -1,4 +1,4 @@
-/* Welcome to Compass.
+/*Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -26,111 +26,90 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 9, ../sass/style.scss */
 .rougeFonce-color {
   color: #640b0a;
 }
 
-/* line 9, ../sass/style.scss */
 .rougeFonce {
   background: #640b0a;
 }
 
-/* line 10, ../sass/style.scss */
 .rouge-color {
   color: #8e161c !important;
 }
 
-/* line 10, ../sass/style.scss */
 .rouge {
   background: #8e161c;
 }
 
-/* line 11, ../sass/style.scss */
 .bleu-color {
   color: #4682cb;
 }
 
-/* line 11, ../sass/style.scss */
 .bleu {
   background: #4682cb;
 }
 
-/* line 12, ../sass/style.scss */
 .white-color {
   color: #ffffff;
 }
 
-/* line 12, ../sass/style.scss */
 .white {
   background: #ffffff;
 }
 
-/* line 13, ../sass/style.scss */
 .typo-color {
   color: #303030;
 }
 
-/* line 13, ../sass/style.scss */
 .typo {
   background: #303030;
 }
 
-/* line 19, ../sass/style.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 23, ../sass/style.scss */
 h1, a {
   font-family: 'Roboto', sans-serif;
   color: #303030;
 }
 
-/* line 23, ../sass/style.scss */
 p{
   font-family: 'Roboto', sans-serif;
   color: #303030;
@@ -138,12 +117,10 @@ p{
   text-align: justify;
 }
 
-/* line 27, ../sass/style.scss */
 h1 {
   font-size: 2rem;
 }
 
-/* line 30, ../sass/style.scss */
 h2 {
   font-size: 1.26rem;
   font-family: 'Quicksand', sans-serif;
@@ -151,7 +128,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* line 36, ../sass/style.scss */
 h3 {
   font-size: 1.1rem;
   font-family: 'Quicksand', sans-serif;
@@ -160,7 +136,6 @@ h3 {
   color: #4682cb;
 }
 
-/* line 44, ../sass/style.scss */
 h4 {
   font-size: 1.20rem;
   font-family: 'Quicksand', sans-serif;
@@ -193,7 +168,6 @@ h5 {
   text-shadow: 2px 2px 0px black;
 }
 
-/* line 52, ../sass/style.scss */
 a.bouton {
   margin-top: 1rem;
   border: 0px;
@@ -205,36 +179,29 @@ a.bouton {
   transition: background 0.7s ease;
   webkit-webkit-transition: background 0.7s ease;
 }
-/* line 63, ../sass/style.scss */
 a.bouton:active, a.bouton:focus, a.bouton:hover {
   background: #8e161c;
 }
 
-/* line 69, ../sass/style.scss */
 a {
   text-decoration: none !important;
 }
 
-/* line 73, ../sass/style.scss */
 .left {
   float: left;
 }
 
-/* line 76, ../sass/style.scss */
 .right {
   float: right;
 }
 
-/* line 81, ../sass/style.scss */
 .navigationTop {
   margin: 0 auto;
   overflow: auto;
 }
-/* line 85, ../sass/style.scss */
 .navigationTop ul {
   height: 50px;
 }
-/* line 88, ../sass/style.scss */
 
 .navigationTop .forResponsive{
   display: none;
@@ -246,7 +213,6 @@ a {
   text-align: center;
   text-decoration: none;
 }
-/* line 95, ../sass/style.scss */
 .navigationTop ul li a i {
   width: 30px;
   height: 30px;
@@ -257,39 +223,32 @@ a {
   padding: 6px;
 }
 
-/* line 107, ../sass/style.scss */
 .navigationBaseline {
   margin-right: 1rem;
   margin: 0 auto;
   overflow: auto;
 }
-/* line 111, ../sass/style.scss */
 .navigationBaseline h1 {
   padding-top: 1rem;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 114, ../sass/style.scss */
 .navigationBaseline h1 a:hover {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* line 121, ../sass/style.scss */
 .navigationBottom {
   margin: 0 auto;
   overflow: auto;
 }
-/* line 124, ../sass/style.scss */
 .navigationBottom ul {
   padding-left: 10px;
   list-style: none;
 }
-/* line 128, ../sass/style.scss */
 .navigationBottom ul li {
   float: left;
 }
-/* line 131, ../sass/style.scss */
 .navigationBottom ul li a {
   color:#fff;
   display: block;
@@ -298,7 +257,6 @@ a {
   text-decoration: none;
   border-radius: 50px;
 }
-/* line 138, ../sass/style.scss */
 .navigationBottom ul li a:hover {
   background: #8e161c;
   color: #ffffff;
@@ -332,22 +290,18 @@ a {
 .sub-menu li a:hover{
   background:#c57a79 !important;
 }
-/* line 145, ../sass/style.scss */
 .img-responsive {
   width: 100%;
 }
 
-/* line 150, ../sass/style.scss */
 section {
   background: #f5f5f5;
   margin: 0 auto;
 }
-/* line 153, ../sass/style.scss */
 section .imgStyle {
   padding: 0;
   margin: 0;
 }
-/* line 157, ../sass/style.scss */
 section .rowStyle {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -383,37 +337,30 @@ section .rowStyle {
 }
 
 
-/* line 164, ../sass/style.scss */
 footer {
   border-top: 1px solid #ccc;
   background: #ededed;
   padding-bottom: 2rem;
 }
-/* line 168, ../sass/style.scss */
 footer .liensFooter {
   padding-top: 1rem;
 }
-/* line 170, ../sass/style.scss */
 footer .liensFooter h4 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0;
 }
-/* line 176, ../sass/style.scss */
 footer .liensFooter .lienStyle {
   padding: 1rem 1rem 0 0;
 }
-/* line 178, ../sass/style.scss */
 footer .liensFooter .lienStyle li {
   list-style: none;
 }
-/* line 180, ../sass/style.scss */
 footer .liensFooter .lienStyle li a {
   font-weight: bold;
   color: #303030;
 }
-/* line 184, ../sass/style.scss */
 footer .liensFooter .lienStyle li a:active, footer .liensFooter .lienStyle li a:hover, footer .liensFooter .lienStyle li a:focus {
   color: #8e161c;
   text-decoration: none;
@@ -432,6 +379,10 @@ footer .liensFooter .lienStyle li a:active, footer .liensFooter .lienStyle li a:
 
 .margin-top{
   margin-top:2rem;
+}
+
+.contentActivite{
+  padding-right: 2rem;
 }
 
 .contentActivite .date{
@@ -576,7 +527,6 @@ section{
   transition: background 0.7s ease;
   webkit-webkit-transition: background 0.7s ease;
 }
-/* line 63, ../sass/style.scss */
 .partenaireCategory a.bouton:active, .partenaireCategory a.bouton:focus,.partenaireCategory a.bouton:hover {
   background: #8e161c;
 }
@@ -610,7 +560,6 @@ section{
   transition: background 0.7s ease;
   webkit-webkit-transition: background 0.7s ease;
 }
-/* line 63, ../sass/style.scss */
 .partenaireClubs a.bouton:active, .partenaireClubs a.bouton:focus,.partenaireClubs a.bouton:hover {
   background: #8e161c;
 }
@@ -623,7 +572,6 @@ section{
   background: white;
 }
 
-/* line 198, ../sass/style.scss */
 footer .lienUtile h4 {
   margin-top: 1rem;
   text-align: center;
@@ -687,7 +635,6 @@ footer .owl-theme .owl-controls .owl-page span {
     webkit-webkit-transition: background 0.7s ease;
 }
 
-/* line 63, ../sass/style.scss */
 #formulaire button:active, #formulaire button:focus, #formulaire button:hover {
   background: #8e161c;
 }

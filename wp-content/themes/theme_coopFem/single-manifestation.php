@@ -26,22 +26,13 @@
 
 										<div class="col-md-1 calendrier">
 
-					          <?php
-					          $texte = get_field('date_manif');
-					          //Les chiffres
-					          $chiffres = split("[a-zA-Z]", $texte);
-					          //Les lettres
-					          $lettres = split("[0-9]", $texte);
-					          //Affichage
-					          echo "<p class='date_month'>".implode("",$lettres);
-					          echo "<p class='date_day'>".implode("",$chiffres);
-					          ?>
+					         <?php showDate(get_field('date_manif')); ?>
 
 					        </div>
 					        <div class="col-md-11 contentActivite" style="margin-top=1rem">
 
 										<h3><?php the_title(); ?></h3>
-					          <p class="typo-color"><i class="typo-color fa fa-clock-o rouge-color"> </i><?php the_field('heure_manif') ?> 	<i class="typo-color fa fa-map-marker rouge-color"> </i> <?php the_field('lieu_manif') ?> </p>
+					          <p class="typo-color"><i class="typo-color fa fa-clock-o rouge-color"> </i> <?php the_field('heure_manif') ?> 	<i class="typo-color fa fa-map-marker rouge-color"> </i> <?php the_field('lieu_manif') ?> </p>
 
 					        </div>
 					    </div>
