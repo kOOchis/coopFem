@@ -80,11 +80,14 @@ get_header(); ?>
     <div class="col-md-8">
       <h2 style="margin-left:-15px;">Quelques activités de la Coopération Féminine</h2>
         <!-- Début de la Boucle. -->
-        <?php $args = array(
-        'post_type' => 'activite',
-        'showposts'=>3);
-         $query = new WP_Query( $args );
-         ?>
+        <?php 
+        $args = array(
+          'post_type' =>  'activite',
+          'paged'     =>  get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
+          'showposts' =>  3
+        );
+        $query = new WP_Query( $args );
+        ?>
         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div  class="row rowStyle">        
             <!-- <div class="col-xs-5 imgStyle">
