@@ -695,6 +695,10 @@ label{
   background:#8e161c !important ;
 }
 
+.form-control{
+  margin-bottom: 1rem !important;
+}
+
 
 @media only screen and (max-width : 780px) {
 

@@ -33,33 +33,8 @@ get_header(); ?>
     </div>
 
     <div class="col-md-6">
-      <div class="success">
-        <h2 class="messageSucess">Votre message à bien été envoyé<br>Merci</h2>
-      </div>
       <h3>Nous envoyer un email</h3>
-      <form id="formulaire" method="post" action="envoie.php">
-
-        <div class="col-md-12 colForm">
-          <div class="form-group">
-            <input type="text" class="form-control" id="nom" name="nom" required placeholder="Nom">
-          </div>
-        </div>
-
-        <div class="col-md-12 colForm">
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-          </div>
-        </div>
-
-        <div class="col-md-12 colForm">
-          <div class="form-group">
-            <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Message"></textarea>
-          </div>
-        </div>
-
-        <div class="col-md-12 colForm text-right">
-          <button type="submit" class="btn btn-primary bouton" name="action" value="Envoyer">Envoyer</button>
-        </div>
+      <?php echo do_shortcode( '[contact-form-7 id="272" title="Contact form 1]' ); ?>
 
       </form>
     </div>

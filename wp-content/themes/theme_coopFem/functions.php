@@ -51,6 +51,8 @@ function showDate($dates) {
     echo "<p class='date_day'>".$dates[0];
 }
 
+
+/*
 function pagination($query) {
 
 	$baseURL="http://".$_SERVER['HTTP_HOST'];
@@ -97,5 +99,5 @@ function pagination($query) {
 		}
 		echo '</ul>';
 	}
-}
+}*/
 ?>
