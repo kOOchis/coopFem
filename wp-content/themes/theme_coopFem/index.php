@@ -12,10 +12,13 @@
  * @subpackage Play-Again
  * @since 1.0
  */
-
 get_header(); ?>
   <!--sélecteur pour afficher séparément les register post type par id-->
-  <?php sliderCoopfem_show(); ?>
+  <!-- <?php sliderCoopfem_show(); ?> -->
+  <div class="container" style="padding-left: 0; padding-right: 0">
+    <?php echo do_shortcode('[smartslider3 slider=1]'); ?>
+  </div>
+
 
   <!--sélecteur pour afficher séparément les register post type par id-->
   <?php
@@ -25,13 +28,11 @@ get_header(); ?>
    $date_soutien = $billet_soutien->post_date;
    $contenu_soutien = get_field( 'presentation_resume', $id_soutien );
    $permalink = get_post_permalink();
-
    $id_radio = 39;
    $billet_radio = get_post($id_radio);
    $title_radio = $billet_radio->post_title;
    $date_radio = $billet_radio->post_date;
    $contenu_radio = get_field( 'presentation_resume', $id_radio );
-
    $id_action = 34;
    $billet_action = get_post($id_action);
    $title_action = $billet_action->post_title;
@@ -80,20 +81,17 @@ get_header(); ?>
     <div class="col-md-8">
       <h2 style="margin-left:-15px;">Quelques activités de la Coopération Féminine</h2>
         <!-- Début de la Boucle. -->
-        <?php 
-        $args = array(
-          'post_type' =>  'activite',
-          'paged'     =>  get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
-          'showposts' =>  3
-        );
-        $query = new WP_Query( $args );
-        ?>
-        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php $args = array(
+        'post_type' => 'activite',
+        'cat' => '19',
+        'showposts'=>3);
+      $query = new WP_Query( $args );
+      while ($query->have_posts()) : $query->the_post(); ?>
         <div  class="row rowStyle">        
-            <!-- <div class="col-xs-5 imgStyle">
-                <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt=""> 
-            </div> -->
-          <div class=" contentActivite">        
+            <div class="col-md-5 imgStyle">
+                <img class="img-responsive"  src="<?php echo the_post_thumbnail_url(); ?>" alt=""> 
+            </div>
+          <div class="col-md-7 contentActivite">        
               <h3><?php the_title(); ?></h3>
               <p class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> 
               <?php echo get_the_date(); ?></p>
@@ -101,9 +99,7 @@ get_header(); ?>
               <a href="<?php the_permalink(); ?>" class="btn btn-primary bouton">Lire la suite</a>
           </div>
         </div>
-        <?php endwhile; else: ?>
-        <?php endif; ?>
-        <?php pagination($wp_query); ?>
+       <?php endwhile; ?>
     </div>
 
     <div class="col-md-4 manifestations">

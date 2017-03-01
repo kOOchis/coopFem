@@ -114,7 +114,7 @@ p{
   font-family: 'Roboto', sans-serif;
   color: #303030;
   font-size: 14px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 h1 {
@@ -373,6 +373,8 @@ footer .liensFooter .lienStyle li a:active, footer .liensFooter .lienStyle li a:
 .presentation{
   margin-top:50px !important;
 }
+
+
 
 #volontaire p{
   text-align: center;
@@ -685,6 +687,14 @@ label{
   font-family: 'Roboto', sans-serif !important;
 }
 
+.n2-style-09efebcef1f2f45d29438e0cabcf79bc-dot{
+  background: white !important;
+}
+
+.n2-active{
+  background:#8e161c !important ;
+}
+
 
 @media only screen and (max-width : 780px) {
 
@@ -717,5 +727,9 @@ label{
   .menu-navigation-header-container{
     display: none;
   }
+
+  .presentation .bouton{
+  margin-bottom: 2rem;
+}
 
 }
