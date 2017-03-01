@@ -36,8 +36,13 @@ set_post_thumbnail_size(409,544,true );
  * @return [array] preformat month and day 
  */
 function getDates($date) {
-	$dateArr = explode(" ", $date);
-	$dateArr[1] = substr($dateArr[1], 0, 4);
+	$mois = ['Janv', 'Fév', 'Mars', 'Avr', 'MAI', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec'];
+	$year = substr($date, 0, 4);
+	$month = substr($date, 4, 2);
+	$day = substr($date, 6, 2);
+	$dateArr = [];
+	$dateArr[0] = $day;
+	$dateArr[1] = $mois[$month - 1];
 	return $dateArr;
 }
 
