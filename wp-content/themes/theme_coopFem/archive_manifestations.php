@@ -22,6 +22,33 @@ get_header(); ?>
     <div class="col-md-12 manifestations">
     <h2 style="margin-top:2rem;">Événements et Manifestations à venir</h2>
 
+    <div class="row">
+    <form action="">
+
+    <div class="col-md-5">
+        <div class="form-group">
+        <select class="form-control" id="exampleSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="form-group">
+      <input type="text" class="form-control" id="text" placeholder="Rechercher">
+    </div>
+  </div>
+  <div class="col-md-2">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+
+    </form>
+
+    </div>
+
 
     <?php
            // get posts
