@@ -19,9 +19,10 @@
  <div class="container">
        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
            <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-             <div class="row" style=" margin-top:1rem; margin-left:0;">
-               <a class="retourArrow" href="javascript:history.go(-1)"> <i class="fa fa-arrow-left" aria-hidden="true"> </i> Retour</a>
-             </div>
+             <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
+        <?php $url = home_url(); ?>
+        <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
+    </div>
              <h2 style="margin-top:1rem;" class="entry-title"><?php the_title(); ?></h2>
              <p style="margin-bottom:1rem;" class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> <?php echo get_the_date(); ?></p>
              <div class="row">

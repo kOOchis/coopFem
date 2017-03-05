@@ -34,13 +34,13 @@
 		  </div>
 			<div class="col-md-5 lienUtile">
         <h4>liens utiles</h4>
-					<div class="slider-footer owl-theme logoBg">
-				    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo1.jpg" alt=""></div>
-				    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo2.jpg" alt=""></div>
-				    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo3.jpg" alt=""></div>
-				    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo4.jpg" alt=""></div>
-				    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo5.jpg" alt=""></div>
-					</div>
+			<div class="slider-footer owl-theme logoBg">
+			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo1.jpg" alt=""></div>
+			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo2.jpg" alt=""></div>
+			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo3.jpg" alt=""></div>
+			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo4.jpg" alt=""></div>
+			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo5.jpg" alt=""></div>
+			</div>
       </div>
 		</div>
 	</footer>

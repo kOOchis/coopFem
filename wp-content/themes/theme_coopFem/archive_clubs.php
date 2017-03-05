@@ -16,18 +16,25 @@
 
 get_header(); ?>
 
-
-
 <div class="container">
   <div class="row">
     <div class="col-md-12 manifestations">
+    <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
+        <?php $url = home_url(); ?>
+        <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
+    </div>
     <h2 style="margin-top:2rem;">Nos clubs</h2>
-    <?php $args = array(
-      'post_type' => 'clubs',
-      'order' => 'DESC',
-      'showposts'=>100);
-    $query = new WP_Query( $args );
-    while ($query->have_posts()) : $query->the_post(); ?>
+      <?php echo facetwp_display( 'facet', 'list_clubs' ); ?>
+      <?php $args = array(
+        "post_type" => "clubs",
+        "post_status" => "publish",
+        "orderby" => "date",
+        "order" => "DESC",
+        "posts_per_page" => -1
+      );
+     $query = new WP_Query( $args ); ?>
+    <div class="facetwp-template">
+    <?php while ($query->have_posts()) : $query->the_post(); ?>
         <div class="col-md-4 partenaireClubs" style="padding:5px;">
           <div class="paddingClubs">
             <h3><?php the_title(); ?></h3>
@@ -35,6 +42,7 @@ get_header(); ?>
           </div>
         </div>
       <?php endwhile; ?>
+      </div>
   </div>
   </div>
 </div>

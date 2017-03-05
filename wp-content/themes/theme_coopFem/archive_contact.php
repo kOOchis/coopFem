@@ -23,13 +23,17 @@ get_header(); ?>
 </div>
 
 <div class="container">
+  <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
+        <?php $url = home_url(); ?>
+        <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
+  </div>
   <h2 style="margin-top:2rem;">Nous contacter</h2>
   <div class="row">
     <div class="col-md-6">
       <h3>Détails</h3>
       <p>39 rue Broca <br>75005 Paris</p>
       <p>Tél. : 01 42 17 10 90 / Fax : 01 42 17 10 89</p>
-      <p>contact@cooperation-feminine.fr</p>
+      <!-- <p>contact@cooperation-feminine.fr</p> -->
     </div>
 
     <div class="col-md-6">

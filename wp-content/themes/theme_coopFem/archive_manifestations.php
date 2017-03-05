@@ -20,35 +20,12 @@ get_header(); ?>
 <div class="container">
   <div class="row">
     <div class="col-md-12 manifestations">
+    <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
+        <?php $url = home_url(); ?>
+        <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
+    </div>
     <h2 style="margin-top:2rem;">Événements et Manifestations à venir</h2>
-
-    <div class="row">
-    <form action="">
-
-    <div class="col-md-5">
-        <div class="form-group">
-        <select class="form-control" id="exampleSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-md-5">
-      <div class="form-group">
-      <input type="text" class="form-control" id="text" placeholder="Rechercher">
-    </div>
-  </div>
-  <div class="col-md-2">
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-
-    </form>
-
-    </div>
-
+    <?php echo facetwp_display( 'facet', 'list_manifestations' ); ?>
 
     <?php
            // get posts
@@ -60,14 +37,16 @@ get_header(); ?>
       'order'       => 'ASC'
       ));
 
-      if( $posts ): ?>
+      ?>
+
+      <div class="facetwp-template">
+      <?php if( $posts ): ?>
 
       <?php foreach( $posts as $post ): 
         
         setup_postdata( $post )
      
       ?>
-      
       <div class="row rowCalendar">
 
           <div class="col-md-1 calendrier">
@@ -87,7 +66,7 @@ get_header(); ?>
   <?php endif; ?>
 
 
-
+      </div>
   </div>
   </div>
 </div>

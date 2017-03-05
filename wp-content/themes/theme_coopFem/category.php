@@ -9,7 +9,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Play-Again
+ * @subpackage Twenty_Ten
  * @since 1.0
  */
 

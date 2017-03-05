@@ -19,6 +19,10 @@ get_header(); ?>
 <div class="container">
   <div class="row">
     <div class="col-md-12 manifestations">
+    <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
+        <?php $url = home_url(); ?>
+        <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
+    </div>
     <h2 style="margin-top:2rem;">Activites educatives</h2>
     <?php $args = array(
       'post_type' => 'activite',
@@ -27,7 +31,6 @@ get_header(); ?>
     $query = new WP_Query( $args );
     while ($query->have_posts()) : $query->the_post(); ?>
     <div class="row rowCalendar">
-
         <div class="col-md-12 contentActivite">
           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
           <p class="typo-color"><i class="typo-color fa fa-calendar rouge-color"></i>Posté le<?php echo get_the_date() ?> </p>

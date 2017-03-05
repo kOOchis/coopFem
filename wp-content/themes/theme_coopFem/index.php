@@ -58,7 +58,7 @@ get_header(); ?>
       <div class="col-md-4">
         <?php echo "<h2>$title_soutien</h2>
         <p>$contenu_soutien</p>"; ?>
-        <a href="<?php echo esc_url( $url ); ?>/presentation/action-feminine-de-collecte" class="btn btn-primary bouton">Plus d'infos</a>
+        <a href="<?php echo esc_url( $url ); ?>/presentation/le-soutien-scolaire-et-le-club-aleph" class="btn btn-primary bouton">Plus d'infos</a>
       </div>
     </div>
   </div>
@@ -102,13 +102,32 @@ get_header(); ?>
        <?php endwhile; ?>
     </div>
 
+
+
+
+
+
     <div class="col-md-4 manifestations">
       <h2 style="margin-left:-15px;">Événements et Manifestations à venir</h2>
-      <?php $args = array(
-        'post_type' => 'manifestation',
-        'showposts'=>3);
-      $query = new WP_Query( $args );
-      while ($query->have_posts()) : $query->the_post(); ?>
+      <?php
+           // get posts
+      $posts = get_posts(array(
+      'post_type'     => 'manifestation',
+      'posts_per_page'  => 3,
+      'meta_key'      => 'date_manif',
+      'orderby'     => 'meta_value',
+      'order'       => 'ASC'
+      ));
+
+      ?>
+
+      <?php if( $posts ): ?>
+
+      <?php foreach( $posts as $post ): 
+        
+        setup_postdata( $post )
+     
+      ?>
       <div class="row rowStyle">
 
           <div class="col-md-2 calendrier">
@@ -124,19 +143,31 @@ get_header(); ?>
             <p class="typo-color"><i class="typo-color fa fa-clock-o rouge-color"></i><?php the_field('lieu_manif') ?> </p>
           </div>
       </div>
-    <?php endwhile; ?>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
     <div  style="margin-top:0;"  class="rowStyle row">
       <a href="<?php echo esc_url( $url ); ?>/manifestations/" class="btn btn-primary bouton">Voir toutes les manifestations</a>
     </div>
     </div>
-
     <div class="col-md-4 manifestations">
       <h2 style="margin-left:-15px;">Programmes de clubs à venir</h2>
-      <?php $args = array(
-        'post_type' => 'programmes',
-        'showposts'=>3);
-      $query = new WP_Query( $args );
-      while ($query->have_posts()) : $query->the_post(); ?>
+      <?php
+           // get posts
+      $posts = get_posts(array(
+      'post_type'     => 'programmes',
+      'posts_per_page'  => 3,
+      'meta_key'      => 'date_programme',
+      'orderby'     => 'meta_value',
+      'order'       => 'ASC'
+      ));
+
+         if( $posts ): 
+
+        foreach( $posts as $post ): 
+        setup_postdata( $post ) 
+      ?>
+
       <div class="row rowStyle">
 
           <div class="col-md-2 calendrier">
@@ -152,7 +183,11 @@ get_header(); ?>
             <p class="typo-color"><i class="typo-color fa fa-clock-o rouge-color"></i><?php the_field('lieu_programme') ?> </p>
           </div>
       </div>
-    <?php endwhile; ?>
+      
+      <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+
     <div  style="margin-top:0;"  class="rowStyle row">
       <?php $url = home_url(); ?>
       <a href="<?php echo esc_url( $url ); ?>/nos-programmes" class="btn btn-primary bouton">Voir tous les programmes</a>
