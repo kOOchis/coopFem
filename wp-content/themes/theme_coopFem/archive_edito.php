@@ -27,8 +27,8 @@
              <p style="margin-bottom:1rem;" class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> <?php echo get_the_date(); ?></p>
              <div class="row">
                <div class="col-md-7">
-                 <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt="">
-               </div>
+                   <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt="">
+                </div>
              </div>
            <?php endwhile;?>
           </div>

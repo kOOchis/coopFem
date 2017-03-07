@@ -52,7 +52,7 @@ get_header(); ?>
       <div class="col-md-4">
         <?php echo "<h2>$title_radio</h2>
         <p>$contenu_radio</p>"; ?>
-        <a target="_blank" href="https://web.archive.org/web/20160409190429/http://radiorcj.info/emissions/pour-nous-les-femmes/" class="btn btn-primary bouton">Toutes les émissions</a>
+        <a target="_blank" href="http://radiorcj.info/emissions/pour-nous-les-femmes/" class="btn btn-primary bouton">Toutes les émissions</a>
       </div>
 
       <div class="col-md-4">
@@ -93,8 +93,7 @@ get_header(); ?>
             </div>
           <div class="col-md-7 contentActivite">        
               <h3><?php the_title(); ?></h3>
-              <p class="date"><i class="fa fa-calendar-o bleu-color white" aria-hidden="true"></i> 
-              <?php echo get_the_date(); ?></p>
+              
               <p><?php the_excerpt(); ?></p>
               <a href="<?php the_permalink(); ?>" class="btn btn-primary bouton">Lire la suite</a>
           </div>

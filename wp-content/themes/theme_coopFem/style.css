@@ -6,10 +6,10 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 /* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ h1, h2, h3, h4, h5, h6,/* p, */ blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+del, dfn, /* em, */ img, ins, kbd, q, s, samp,
+small, strike, /* strong, */ sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -144,18 +144,6 @@ h4 {
   color: #303030;
 }
 h5 {
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  font-size: 1.20rem;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: white;
-  z-index: 200;
-  text-shadow: 2px 2px 0px black;
-}
-#slider-affiche-principal .item p {
   position: absolute;
   bottom: 0;
   left: 15px;
@@ -309,35 +297,6 @@ section .imgStyle {
 section .rowStyle {
   margin-top: 1rem;
   margin-bottom: 2rem;
-}
-
-#slider-affiche-principal .item{
-  max-height: 400px !important;
-}
-
-#slider-affiche-principal .img-slider{
-  max-height: 400px !important;
-}
-
-#slider-affiche-principal .img-slider img{
-  min-width: 100% !important;
-  height: auto !important;
-}
-
-#slider-affiche-principal .owl-controls,#slider-affiche-principal .clickable{
-  position: relative !important;
-  margin-top: -3rem !important;
-}
-
-#slider-affiche-principal .owl-page span{
-  background: white !important;
-  opacity: 1 !important;
-  -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,1);
-  box-shadow: 1px 1px 1px 0px rgba(0,0,0,1);
-}
-
-#slider .active span{
-  background: #8e161c !important;
 }
 
 
@@ -778,17 +737,18 @@ img.centered {
 display: block;
 margin-left: auto;
 margin-right: auto;
+margin-bottom: 1rem;
 }
 
 img.alignright {
 padding: 4px;
-margin: 0 0 2px 7px;
+margin: 0 0 1rem 7px;
 display: inline;
 }
 
 img.alignleft {
 padding: 4px;
-margin: 0 7px 2px 0;
+margin: 0 7px 1rem 0;
 display: inline;
 }
 
@@ -834,3 +794,21 @@ padding: 0 4px 5px;
 margin: 0;
 }
 /* End captions */
+
+
+.item img{
+  padding-top:2rem; 
+  width: 219px;
+}
+
+@media print {
+.navigationTop {display:none;}
+.navigationBaseline {display:none;}
+.navigationBottom {display:none;}
+footer {display:none;}
+.footer2{display: none;}
+.retourHome{display: none;}
+.impression span{font-weight: normal!important;
+color:black!important;}
+.btnImprimer{display: none!important;}
+}

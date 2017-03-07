@@ -17,7 +17,7 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="container impression">
     <div class="row" style=" margin-top:1rem;padding-left: 1rem;">
         <?php $url = home_url(); ?>
         <a class="retourHome" href="<?php echo esc_url( $url ); ?>"> <i class="fa fa-home" aria-hidden="true"> </i> Retour vers l'accueil</a>
@@ -41,27 +41,27 @@ get_header(); ?>
         Adhérer à la Coopération Féminine - 70€
       </label>
     </div>
-    <div class="form-check disabled">
+    <div class="form-check ">
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" >
         M'abonner au magazine - 25€
       </label>
     </div>
-    <div class="form-check disabled">
+    <div class="form-check ">
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4" disabled>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4" >
         Adhérer à deux + m'abonner au magazine - 115€
       </label>
     </div>
-    <div class="form-check disabled">
+    <div class="form-check ">
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios5" value="option5" disabled>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios5" value="option5" >
         Adhérer comme membre bienfaiteur  - à partir de 130€
       </label>
     </div>
-    <div class="form-check disabled">
+    <div class="form-check ">
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios6" value="option6" disabled>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios6" value="option6" >
         faire un don de <input type="text" name="textOptionRadio6">
       </label>
     </div>
@@ -95,19 +95,25 @@ get_header(); ?>
 
   <div class="form-group">
     <label for="exampleInputEmail1"><br>Nom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="name" >
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Prénom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="firstName" >
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Adresse</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="text">Adresse Postale</label>
+    <input type="email" class="form-control" id="Adresse Postale" >
   </div>
+
   <div class="form-group">
-    <label for="exampleInputEmail1">Téléphone</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="text">Adresse Mail</label>
+    <input type="text" class="form-control" id="mail" aria-describedby="textHelp">
+  </div>
+
+  <div class="form-group">
+    <label for="text">Téléphone</label>
+    <input type="text" class="form-control" id="telephone" aria-describedby="textHelp">
   </div>
 
   <div class="form-group">
@@ -116,22 +122,27 @@ get_header(); ?>
 pendant un an (vous ne paierez donc que 65€ pendant un an pour l'adhésion + magazine).</p>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Nom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputtext1">Nom</label>
+    <input type="text" class="form-control" id="Nom" aria-describedby="textHelp">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Prénom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputtext1">Prénom</label>
+    <input type="text" class="form-control" id="Prénom" aria-describedby="textHelp">
+  </div>
+   <div class="form-group">
+    <label for="text">Adresse Postale</label>
+    <input type="email" class="form-control" id="Adresse Postale" >
+  </div>
+
+  <div class="form-group">
+    <label for="text">Adresse Mail</label>
+    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Adresse</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputtext1">Téléphone</label>
+    <input type="text" class="form-control" id="Téléphone" aria-describedby="textHelp">
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Téléphone</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <button type="submit" style="font-family: 'Roboto', sans-serif !important;" class="alignright btn btn-primary">Imprimer</button>
+  <button type="submit" style="font-family: 'Roboto', sans-serif !important;" class="alignright btn btn-primary btnImprimer" ONCLICK="window.print()">Imprimer</button>
 </form>
 
 

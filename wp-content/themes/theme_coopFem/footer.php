@@ -11,9 +11,6 @@
  */
 ?>
 
-
-
-
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
@@ -34,12 +31,16 @@
 		  </div>
 			<div class="col-md-5 lienUtile">
         <h4>liens utiles</h4>
+		<?php $args = array(
+	    'post_type' => 'sliderFooter',
+	    'showposts'=>-1);
+	    ?>
 			<div class="slider-footer owl-theme logoBg">
-			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo1.jpg" alt=""></div>
-			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo2.jpg" alt=""></div>
-			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo3.jpg" alt=""></div>
-			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo4.jpg" alt=""></div>
-			    <div class="item"><img src="<?php bloginfo("template_directory"); ?>/ressources/images/logo5.jpg" alt=""></div>
+			<?php
+	    $query = new WP_Query( $args );
+	    while ($query->have_posts()) : $query->the_post(); ?>
+			   <div class="item"><a target="_blank" href="<?php echo get_field('url_slider_footer') ?>"><img src="<?php echo the_post_thumbnail_url(); ?>" alt=""></a></div>
+		<?php endwhile; ?>
 			</div>
       </div>
 		</div>

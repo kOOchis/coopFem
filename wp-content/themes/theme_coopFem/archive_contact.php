@@ -38,7 +38,7 @@ get_header(); ?>
 
     <div class="col-md-6">
       <h3>Nous envoyer un email</h3>
-      <?php echo do_shortcode( '[contact-form-7 id="272" title="Contact form 1]' ); ?>
+      <?php echo do_shortcode( '[contact-form-7 id="390" title="Contact form 1]' ); ?>
 
       </form>
     </div>

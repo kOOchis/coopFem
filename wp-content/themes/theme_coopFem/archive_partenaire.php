@@ -26,13 +26,13 @@ get_header(); ?>
     <h2 style="margin-top:2rem;">Partenaires et affiliés</h2>
     <?php $args = array(
       'post_type' => 'partenaire',
-      'showposts'=>100);
+      'showposts'=>-1);
     $query = new WP_Query( $args );
     while ($query->have_posts()) : $query->the_post(); ?>
         <div class="col-md-4 partenaireCategory" style="padding:5px;">
           <div class="paddingCategory heightPartenaire">
             <h3><?php the_title(); ?></h3>
-            <p><?php the_field('resume_partenaire') ?></p>
+            <p><?php the_excerpt() ?></p>
             <a href="<?php the_permalink(); ?>" class="btn btn-primary bouton">En savoir plus</a>
           </div>
         </div>

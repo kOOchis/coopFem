@@ -1,5 +1,5 @@
     $('.menu li > .sub-menu').hide();
-    $('.menu li > .sub-menu').parent().mouseenter(function() {
+    $('.menu li > .sub-menu').parent().click(function() {
       var submenu = $(this).children('.sub-menu');
       $(submenu).slideDown(400);
     });
