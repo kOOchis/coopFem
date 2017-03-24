@@ -110,12 +110,21 @@ get_header(); ?>
       <h2 style="margin-left:-15px;">Événements et Manifestations à venir</h2>
       <?php
            // get posts
+      $today = date('Ymd');
       $posts = get_posts(array(
       'post_type'     => 'manifestation',
       'posts_per_page'  => 3,
+      'meta_query' => array(
+                             array(
+                                'key'   => 'date_manif',
+                                'compare' => '>=',
+                                'value'   => $today,
+                            )
+                          ),
       'meta_key'      => 'date_manif',
       'orderby'     => 'meta_value',
       'order'       => 'ASC'
+
       ));
 
       ?>
@@ -153,10 +162,17 @@ get_header(); ?>
       <h2 style="margin-left:-15px;">Programmes de clubs à venir</h2>
       <?php
            // get posts
+        $today = date('Ymd');
       $posts = get_posts(array(
       'post_type'     => 'programmes',
-      'posts_per_page'  => 3,
-      'meta_key'      => 'date_programme',
+      'posts_per_page'  => -1,
+      'meta_query' => array(
+                             array(
+                                'key'   => 'date_programme',
+                                'compare' => '>=',
+                                'value'   => $today,
+                            )
+                          ),
       'orderby'     => 'meta_value',
       'order'       => 'ASC'
       ));

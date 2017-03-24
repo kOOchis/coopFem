@@ -31,10 +31,17 @@ get_header(); ?>
 
     <?php
            // get posts
+      $today = date('Ymd');
       $posts = get_posts(array(
       'post_type'     => 'programmes',
       'posts_per_page'  => -1,
-      'meta_key'      => 'date_programme',
+      'meta_query' => array(
+                             array(
+                                'key'   => 'date_programme',
+                                'compare' => '>=',
+                                'value'   => $today,
+                            )
+                          ),
       'orderby'     => 'meta_value',
       'order'       => 'ASC'
       ));
