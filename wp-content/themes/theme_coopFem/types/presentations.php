@@ -13,8 +13,8 @@ function register_pres() {
 		'view_item'          => "Voir la présentation",
 		'all_items'          => 'Présentation',
 		'search_items'       => 'Rechercher une présentation',
-		'not_found'          => 'Aucunne présentation',
-		'not_found_in_trash' => 'Aucunne présentation dans la poubelle',
+		'not_found'          => 'Aucune présentation',
+		'not_found_in_trash' => 'Aucune présentation dans la poubelle',
 		'parent_item_colon'  => '',
 		'menu_name'          => 'Présentation',
 	);

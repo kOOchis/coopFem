@@ -8,6 +8,7 @@ require_once(ABSPATH.'wp-content/themes/theme_coopFem/types/appel_volontaire.php
 require_once(ABSPATH.'wp-content/themes/theme_coopFem/types/partenaires.php');
 require_once(ABSPATH.'wp-content/themes/theme_coopFem/types/programmes.php');
 require_once(ABSPATH.'wp-content/themes/theme_coopFem/types/sliderFooter.php');
+require_once(ABSPATH.'wp-content/themes/theme_coopFem/types/popin.php');
 
 // Enable widgetable sidebar
 // You may need to tweak your theme files, more info here - http://codex.wordpress.org/Widgetizing_Themes

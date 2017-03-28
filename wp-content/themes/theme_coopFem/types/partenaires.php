@@ -13,8 +13,8 @@ function register_part() {
 		'view_item'          => "Voir la partenaire",
 		'all_items'          => 'Partenaire',
 		'search_items'       => 'Rechercher un partenaire',
-		'not_found'          => 'aucun partenaire',
-		'not_found_in_trash' => 'aucun partenaire dans la poubelle',
+		'not_found'          => 'Aucun partenaire',
+		'not_found_in_trash' => 'Aucun partenaire dans la poubelle',
 		'parent_item_colon'  => '',
 		'menu_name'          => 'Partenaires et affiliés',
 	);

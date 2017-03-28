@@ -13,6 +13,52 @@
  * @since 1.0
  */
 get_header(); ?>
+  
+
+  <!-- Pop-In -->
+
+  
+      <?php
+           // get posts
+      $today = date('Ymd');
+      $posts = get_posts(array(
+        'post_type' => 'popin',
+        'meta_query' => array(
+        array(
+              'key'   => 'debut_popin',
+              'compare' => '<=',
+              'value'   => $today,
+          ),
+           array(
+              'key'   => 'fin_popin',
+              'compare' => '>=',
+              'value'   => $today,
+          )
+        )
+      ));
+
+         if( $posts ): 
+
+        foreach( $posts as $post ): 
+        setup_postdata( $post ) 
+      ?>
+
+          <div id="popup" class="modal-box">  
+            <div class="modal-body">
+              <p><?php the_content() ?></p>
+            </div>
+            <footer>
+              <a href="#" class="js-modal-close">fermer</a>
+            </footer>
+          </div>
+      
+      <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+  </div>
+
+
+
   <!--sélecteur pour afficher séparément les register post type par id-->
   <!-- <?php sliderCoopfem_show(); ?> -->
   <div class="container" style="padding-left: 0; padding-right: 0">

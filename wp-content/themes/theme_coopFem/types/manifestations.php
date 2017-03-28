@@ -13,8 +13,8 @@ function register_manif() {
 		'view_item'          => "Voir la manifestation",
 		'all_items'          => 'Manifestations',
 		'search_items'       => 'Rechercher une manifestation',
-		'not_found'          => 'Aucunne manifestation',
-		'not_found_in_trash' => 'Aucunne manifestation dans la poubelle',
+		'not_found'          => 'Aucune manifestation',
+		'not_found_in_trash' => 'Aucune manifestation dans la poubelle',
 		'parent_item_colon'  => '',
 		'menu_name'          => 'Manifestations',
 	);

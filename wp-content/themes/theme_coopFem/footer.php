@@ -57,8 +57,6 @@
 	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/firstWordColor.js"></script>
 	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/date.js"></script>
 	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/footer.js"></script>
-	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/jquery-validation/dist/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/jquery-validation/dist/localization/messages_fr.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/formulaire.js"></script>
+	<script type="text/javascript" src="<?php bloginfo("template_directory");?>/javascript/popin.js"></script>
 	</body>
 	</html>
